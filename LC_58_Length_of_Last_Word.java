@@ -1,5 +1,8 @@
-class Solution {
-    public int lengthOfLastWord(String s) {
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
         s = s.trim();
         int count = 0;
         for (int i = s.length() - 1; i >= 0; i--) {
@@ -8,6 +11,6 @@ class Solution {
             }
             count++;
         }
-        return count;
+        System.out.println(count);
     }
 }
