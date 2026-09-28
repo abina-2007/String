@@ -1,13 +1,18 @@
-class Solution {
-    public void reverseString(char[] s) {
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        char[] ch = s.toCharArray();
         int left = 0;
-        int right = s.length - 1;
+        int right = ch.length - 1;
         while (left < right) {
-            char temp = s[left];
-            s[left] = s[right];
-            s[right] = temp;
+            char temp = ch[left];
+            ch[left] = ch[right];
+            ch[right] = temp;
             left++;
             right--;
         }
+        System.out.println(new String(ch));
     }
 }
