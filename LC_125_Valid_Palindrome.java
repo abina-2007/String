@@ -1,5 +1,8 @@
-class Solution {
-    public boolean isPalindrome(String s) {
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
         int i = 0;
         int j = s.length() - 1;
         while (i < j) {
@@ -11,11 +14,12 @@ class Solution {
             }
             if (Character.toLowerCase(s.charAt(i)) !=
                 Character.toLowerCase(s.charAt(j))) {
-                return false;
+                System.out.println(false);
+                return;
             }
             i++;
             j--;
         }
-        return true;
+        System.out.println(true);
     }
 }
