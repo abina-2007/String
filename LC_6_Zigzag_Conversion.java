@@ -1,7 +1,12 @@
-class Solution {
-    public String convert(String s, int numRows) {
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        int numRows = sc.nextInt();
         if (numRows == 1 || s.length() <= numRows) {
-            return s;
+            System.out.println(s);
+            return;
         }
         String[] c = new String[numRows];
         for (int i = 0; i < c.length; i++) {
@@ -23,6 +28,6 @@ class Solution {
         for (String a : c) {
             f += a;
         }
-        return f;
+        System.out.println(f);
     }
 }
