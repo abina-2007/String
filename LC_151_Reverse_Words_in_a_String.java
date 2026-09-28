@@ -1,5 +1,8 @@
-class Solution {
-    public String reverseWords(String s) {
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
         String[] words = s.trim().split("\\s+");
         StringBuilder result = new StringBuilder();
         for (int i = words.length - 1; i >= 0; i--) {
@@ -8,6 +11,6 @@ class Solution {
                 result.append(" ");
             }
         }
-        return result.toString();
+        System.out.println(result.toString());
     }
 }
